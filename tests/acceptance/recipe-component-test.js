@@ -42,12 +42,12 @@ test('A user should see a recipe', function(assert) {
   visit('/');
 
   andThen(function() {
-    var recipeName = findWithAssert('.header').html();
-    var servings = findWithAssert('.servings').html();
-    var firstIngredient = findWithAssert('.ingredients:eq(0) li:eq(0)').html();
-    var directions = findWithAssert('.directions').html();
+    var recipeName = findWithAssert('.header').html().trim();
+    var servings = findWithAssert('.servings').html().trim();
+    var firstIngredient = findWithAssert('.ingredients:eq(0) li:eq(0)').html().trim();
+    var directions = findWithAssert('.directions p').html().trim();
 
-    assert.equal(recipeName, 'The Best Ceasar');
+    assert.equal(recipeName, 'The Best Caesar');
     assert.equal(servings, 'Makes 4 Servings');
     assert.equal(firstIngredient, '2 medium heads of romain lettuce');
     assert.equal(directions, 'Add a pinch of salt and using a fork, mash anchovies. Add lemon juice and red wine vinegar and whisk until anchovies are broken down. Add freshly peeled garlic cloves, Add Grey Poupon, Tabasco, Worchestershire sauce, black pepper, evoo, and whisk until thickly blended. Added chilled lettuce leaves torn to bite size peices and toss by hand. Top with parmesan cheese and season with black pepper.');

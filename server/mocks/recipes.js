@@ -7,7 +7,7 @@ module.exports = function(app) {
       'recipes': [
       {
         id: 1,
-        name: 'The Best Cesar',
+        name: 'The Best Caesar',
         source: 'http://thebestcaesar.com/',
         servings: 4,
         ingredients: [{
