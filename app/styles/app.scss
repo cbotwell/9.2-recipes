@@ -58,7 +58,11 @@ ul, p {
     ul {
         border-top: 1px dotted $font-color;
         border-bottom: 1px dotted $font-color;
-        padding: 15px 35px;    }
+        padding: 15px 35px;
+    }
+    li {
+        line-height: 1.5em;
+    }
     }
 a {
     color: inherit;
