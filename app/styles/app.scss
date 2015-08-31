@@ -1,6 +1,13 @@
 @import "bourbon";
 @import "neat";
 
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 $bg-color: #2C3E50;
 $card-bg: #ECF0F1;
 
@@ -10,7 +17,6 @@ $header-color: #E74C3C;
 
 $header-font: Helvetica, sans-serif;
 $body-font: Georgia, serif;
-
 
 body {
     background: $bg-color;
@@ -49,7 +55,11 @@ ul, p {
 }
 .ingredients {
     color: $ingredients-color;
-}
+    ul {
+        border-top: 1px dotted $font-color;
+        border-bottom: 1px dotted $font-color;
+        padding: 15px 35px;    }
+    }
 a {
     color: inherit;
 }
