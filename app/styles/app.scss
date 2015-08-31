@@ -1,0 +1,61 @@
+@import "bourbon";
+@import "neat";
+
+$bg-color: #2C3E50;
+$card-bg: #ECF0F1;
+
+$font-color: #2C3E50;
+$ingredients-color: #2980B9;
+$header-color: #E74C3C;
+
+$header-font: Helvetica, sans-serif;
+$body-font: Georgia, serif;
+
+
+body {
+    background: $bg-color;
+    color: $font-color;
+    font-family: $body-font;
+}
+
+.card {
+    @include span-columns(6);
+    @include shift(3);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    background: $card-bg;
+    border-radius: 10px;
+    padding: 15px;
+
+    box-shadow: 0px 10px 15px 0px rgba(50, 50, 50, 0.75);
+}
+.header, .servings, .ingredients, .directions {
+    padding: 15px;
+}
+ul, p {
+    margin: 0;
+}
+
+.header {
+    font-family: $header-font;
+    font-size: 2em;
+    font-weight: bold;
+    color: $header-color;
+}
+.servings {
+    padding-top: 0;
+}
+.ingredients {
+    color: $ingredients-color;
+}
+a {
+    color: inherit;
+}
+.fa-external-link {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1.3em;
+}
