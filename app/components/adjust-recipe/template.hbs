@@ -1,0 +1,23 @@
+{{#each recipes as |recipe|}}
+<div class="card">
+    <div class="header">
+        {{recipe.name}}
+    </div>
+    <div class="servings">
+        Makes {{recipe.servings}} Servings
+    </div>
+    <div class="ingredients">
+        <ul>
+            {{#each recipe.ingredients as |ingredient|}}
+            <li>
+                {{ingredient.amount}} {{ingredient.name}}
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+    <div class="directions">
+        <p>{{recipe.directions}}</p>
+    </div>
+    <a href="{{recipe.source}}">{{fa-icon "external-link"}}</a>
+</div>
+{{/each}}
