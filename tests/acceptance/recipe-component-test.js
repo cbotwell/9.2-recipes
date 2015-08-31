@@ -24,11 +24,11 @@ test('A user should see a recipe card', function(assert) {
   visit('/');
 
   andThen(function() {
-    var card = findWithAssert('.card');
-    var header = findWithAssert('.header');
-    var servings = findWithAssert('.servings');
-    var ingredients = findWithAssert('.ingredients');
-    var directions = findWithAssert('.directions');
+    var card = find('.card');
+    var header = find('.header');
+    var servings = find('.servings');
+    var ingredients = find('.ingredients');
+    var directions = find('.directions');
 
     assert.ok(card);
     assert.ok(header);
@@ -44,7 +44,7 @@ test('A user should see a recipe', function(assert) {
   andThen(function() {
     var recipeName = findWithAssert('.header').html();
     var servings = findWithAssert('.servings').html();
-    var firstIngredient = findWithAssert('.ingredients li:eq(0)').html();
+    var firstIngredient = findWithAssert('.ingredients:eq(0) li:eq(0)').html();
     var directions = findWithAssert('.directions').html();
 
     assert.equal(recipeName, 'The Best Ceasar');
